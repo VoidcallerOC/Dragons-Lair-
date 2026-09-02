@@ -10,3 +10,8 @@ $('#cartButton')?.addEventListener('click', () => { cart = cart ? 0 : 1; $('#car
 $('#searchInput')?.addEventListener('input', e => { const q = e.target.value.toLowerCase(); document.querySelectorAll('.category-card').forEach(card => { card.style.opacity = !q || card.textContent.toLowerCase().includes(q) ? '1' : '.28'; }); });
 document.querySelectorAll('.category-card').forEach(card => card.addEventListener('click', () => { const toast = $('#toast'); toast.textContent = `Loading ${card.dataset.category} shelves...`; toast.classList.add('show'); setTimeout(() => toast.classList.remove('show'), 1800); }));
 $('#year').textContent = new Date().getFullYear();
+
+const lightbox = document.querySelector('#lightbox'); const lightboxImage = document.querySelector('#lightboxImage');
+document.querySelectorAll('.gallery-photo').forEach(photo => photo.addEventListener('click', () => { lightboxImage.src=photo.dataset.full; lightboxImage.alt=photo.querySelector('img').alt; lightbox.classList.add('open'); lightbox.setAttribute('aria-hidden','false'); }));
+function closeLightbox(){lightbox?.classList.remove('open');lightbox?.setAttribute('aria-hidden','true');}
+document.querySelector('.lightbox-close')?.addEventListener('click', closeLightbox); lightbox?.addEventListener('click', e => {if(e.target===lightbox) closeLightbox();});
