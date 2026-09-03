@@ -673,7 +673,7 @@ body.menu-open .nav-toggle span::after{ top:0; transform: rotate(-45deg); }
   display: flex; align-items: center; gap: 16px;
   padding: 16px 20px; border: 1px solid rgba(183,138,47,.24); border-radius: 3px;
   background: rgba(0,0,0,.2); transition: border-color .3s ease, background .3s ease, transform .3s ease;
-  min-width: 0;
+  min-width: 0; max-width: 100%; overflow: hidden;
 }
 .rally-links a > span:not(.ci):not(.go){ min-width: 0; flex: 1 1 auto; overflow-wrap: anywhere; word-break: break-word; }
 .rally-links a:hover{ border-color: var(--brass-2); background: rgba(139,30,20,.08); transform: translateX(4px); }
