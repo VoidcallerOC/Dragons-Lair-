@@ -53,14 +53,16 @@
 }
 
 /* ---------- Reset ---------- */
-*, *::before, *::after { box-sizing: border-box; }
+*, *::before, *::after { box-sizing: border-box; min-width: 0; }
 * { margin: 0; }
-html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; overflow-x: hidden; overflow-wrap: break-word; }
 body{
   font-family: var(--ff-body);
   color: var(--parchment);
   line-height: 1.6;
   overflow-x: hidden;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
   background: var(--wood);
@@ -118,6 +120,8 @@ ul { list-style:none; padding:0; }
   line-height: 1.02;
   letter-spacing: .02em;
   text-transform: uppercase;
+  overflow-wrap: break-word;
+  hyphens: auto;
 }
 .h-sec .g { color: var(--wax-3); }
 .h-sec .b { color: var(--brass-2); }
@@ -354,9 +358,10 @@ body.menu-open .nav-toggle span::after{ top:0; transform: rotate(-45deg); }
   max-width: 54ch; margin: 20px auto 0;
 }
 .hero-locations{
-  display: inline-flex; align-items: center; gap: 16px; flex-wrap: wrap;
+  display: inline-flex; align-items: center; gap: 16px; flex-wrap: wrap; justify-content: center;
   margin: 26px auto 0; font-family: var(--ff-head); font-size: .95rem;
   letter-spacing: .12em; text-transform: uppercase; color: var(--ink-2);
+  max-width: 100%;
 }
 .hero-locations .dot{ width: 6px; height: 6px; background: var(--wax); border-radius: 50%; }
 .hero-actions{
@@ -582,6 +587,7 @@ body.menu-open .nav-toggle span::after{ top:0; transform: rotate(-45deg); }
   font-family: var(--ff-body); font-size: .95rem;
   padding: 4px 0; border-bottom: 1px dotted transparent;
   transition: color .2s ease, border-color .2s ease;
+  overflow-wrap: anywhere; word-break: break-word; max-width: 100%;
 }
 .codex-body li a::before{ content: "◆"; color: var(--wax-3); font-size: .55em; flex: none; }
 .codex-body li a:hover{ color: var(--brass-2); border-color: rgba(212,169,68,.4); }
@@ -645,7 +651,9 @@ body.menu-open .nav-toggle span::after{ top:0; transform: rotate(-45deg); }
     linear-gradient(160deg, var(--wood-3), var(--wood));
   border: 1px solid rgba(183,138,47,.22);
   border-radius: 3px;
+  max-width: 100%;
 }
+.rally > *{ min-width: 0; }
 .rally h3{ font-family: var(--ff-display); font-size: clamp(1.8rem, 3.5vw, 2.6rem); text-transform: uppercase; letter-spacing: .04em; color: var(--parchment); margin-bottom: 12px; }
 .rally h3 em{ font-style: italic; color: var(--wax-3); font-family: "IM Fell English SC", Georgia, serif; }
 .rally p{ color: rgba(242,230,201,.78); margin-bottom: 24px; font-size: 1.02rem; }
@@ -654,7 +662,9 @@ body.menu-open .nav-toggle span::after{ top:0; transform: rotate(-45deg); }
   display: flex; align-items: center; gap: 16px;
   padding: 16px 20px; border: 1px solid rgba(183,138,47,.24); border-radius: 3px;
   background: rgba(0,0,0,.2); transition: border-color .3s ease, background .3s ease, transform .3s ease;
+  min-width: 0;
 }
+.rally-links a > span:not(.ci):not(.go){ min-width: 0; flex: 1 1 auto; overflow-wrap: anywhere; word-break: break-word; }
 .rally-links a:hover{ border-color: var(--brass-2); background: rgba(139,30,20,.08); transform: translateX(4px); }
 .rally-links .ci{
   width: 44px; height: 44px; border-radius: 50%; display: grid; place-items: center;
@@ -666,9 +676,9 @@ body.menu-open .nav-toggle span::after{ top:0; transform: rotate(-45deg); }
 .rally-links .fb .ci{ background: #1877f2; }
 .rally-links .wish .ci{ background: var(--brass); color: var(--ink); }
 .rally-links .cl{ font-family: var(--ff-head); font-size: .74rem; letter-spacing: .18em; text-transform: uppercase; color: var(--brass-2); }
-.rally-links .cv{ font-family: var(--ff-display); font-size: 1.15rem; letter-spacing: .04em; color: var(--parchment); }
+.rally-links .cv{ font-family: var(--ff-display); font-size: 1.05rem; letter-spacing: .02em; color: var(--parchment); overflow-wrap: anywhere; word-break: break-word; }
 .rally-links .cv b{ color: var(--brass-2); font-weight: 500; }
-.rally-links .go{ margin-left: auto; font-family: var(--ff-head); letter-spacing: .18em; font-size: .74rem; text-transform: uppercase; color: var(--brass-2); }
+.rally-links .go{ margin-left: auto; font-family: var(--ff-head); letter-spacing: .16em; font-size: .74rem; text-transform: uppercase; color: var(--brass-2); flex: none; white-space: nowrap; }
 
 /* ---------- FAQ ---------- */
 .faq-grid{ display: grid; grid-template-columns: 0.8fr 1.2fr; gap: clamp(30px, 5vw, 64px); align-items: start; }
@@ -735,7 +745,7 @@ body.menu-open .nav-toggle span::after{ top:0; transform: rotate(-45deg); }
 .visit-card .map{
   margin-top: 20px; border-radius: 2px; overflow: hidden; border: 1px solid var(--parchment-edge);
 }
-.visit-card .map iframe{ width: 100%; height: 200px; border: 0; filter: sepia(.1) contrast(1.05); }
+.visit-card .map iframe{ width: 100%; max-width: 100%; height: 200px; border: 0; filter: sepia(.1) contrast(1.05); display: block; }
 
 .holiday{
   margin-top: 44px; padding: 24px 28px;
@@ -819,6 +829,7 @@ body.menu-open .nav-toggle span::after{ top:0; transform: rotate(-45deg); }
   .hero-runes{ display:none; }
 }
 @media (max-width: 720px){
+  :root{ --gutter: 20px; }
   .nav-links, .nav-cta .btn{ display:none; }
   .brand-tag{ display:none; }
   .nav-toggle{ display: inline-flex; }
@@ -828,6 +839,7 @@ body.menu-open .nav-toggle span::after{ top:0; transform: rotate(-45deg); }
   .quest-board{ padding: 34px 22px 40px; }
   .wax-seal{ width: 60px; height: 60px; right: 20px; top: -18px; font-size: .5rem; }
   .wax-seal b{ font-size: .68rem; }
+  .h-sec{ font-size: clamp(1.9rem, 8vw, 2.6rem); }
   .carry{ grid-template-columns: 1fr; }
   .gallery{ grid-template-columns: 1fr 1fr; grid-auto-rows: 160px; }
   .gtile.wide{ grid-column: span 2; }
@@ -835,6 +847,24 @@ body.menu-open .nav-toggle span::after{ top:0; transform: rotate(-45deg); }
   .visit-card{ padding: 24px 22px; }
   .footer-top{ grid-template-columns: 1fr; gap: 28px; }
   .cta-band .h-sec{ font-size: 2rem; }
+  /* Rally links — keep long social handles inside the card */
+  .rally-links a{ gap: 12px; padding: 14px 16px; }
+  .rally-links .ci{ width: 40px; height: 40px; }
+  .rally-links .ci svg{ width: 20px; height: 20px; }
+  .rally-links .cv{ font-size: .95rem; }
+  .rally-links .go{ display: none; }
+  /* Visit card actions wrap tightly */
+  .visit-card .actions .btn{ padding: 11px 16px; font-size: .78rem; }
+  /* Codex summary long labels wrap */
+  .codex summary{ font-size: .95rem; padding: 16px 18px; flex-wrap: wrap; gap: 8px; }
+  .codex summary .sub, .codex summary .count{ margin-left: 0; margin-right: 0; }
+  .codex-body{ padding: 0 18px 18px; }
+  /* Loc-band tighter */
+  .loc-card{ padding: 26px 22px; }
+  .loc-card h3{ font-size: 1.55rem; }
+  .loc-card .actions .btn{ padding: 11px 16px; font-size: .78rem; }
+  /* Hero locations wrap cleanly */
+  .hero-locations{ font-size: .85rem; gap: 10px; }
   .dock{
     display: grid; grid-template-columns: repeat(3, 1fr); position: fixed; inset: auto 0 0 0; z-index: 70;
     background: rgba(15,10,6,.94); backdrop-filter: blur(14px); border-top: 1px solid rgba(183,138,47,.22);
