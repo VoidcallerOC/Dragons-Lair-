@@ -2,16 +2,23 @@
 
 Zero-build static storefront for Dragon's Lair Hobbies — Connecticut's tabletop headquarters, with locations in Wallingford and Berlin.
 
+Rebuilt in the "Cabinet OS" pattern used across the shop's other sibling sites — a CRT arcade-cabinet interface (Press Start 2P + VT323, dark phosphor palette, sticky HUD with live open/closed status, boot screen, attract-mode marquee, chunky panels with hard drop-shadows) themed for tabletop instead of video games.
+
 ## What's here
 
-- Modern dark editorial homepage (Fraunces serif + Inter + JetBrains Mono).
-- Full category tree mirroring the live shop: Games Workshop (40k, Age of Sigmar, The Old World, Citadel, Black Library), Paint & Hobby (Vallejo, Scale 75, Two Thin Coats, Monument Hobbies, Tamiya), and ten Trading Card Games (MTG, Pokémon, Yu-Gi-Oh!, Gundam, Flesh & Blood, Riftbound, Star Wars: Unlimited, Lorcana, Altered, Elestrals).
-- Accessories rail: Chessex, Dragon Shield, Element Card Sleeves.
-- Store selector chip bar + live open/closed status driven by real store hours.
-- Location cards with correct addresses (220 North Colony St Ste C, Wallingford · 848 Farmington Ave Suite 2, Berlin), per-day hours tables, and holiday-closings note.
-- Community section with Discord, Instagram (@dragonslairtcg), Facebook.
-- Photo gallery with lightbox, brand marquee, search filter, mobile-first layout.
-- Vercel-ready zero-build deploy config.
+- Boot / title-screen hero with attract-mode slideshow of the actual shop photos and a keyboard-navigable main menu.
+- Attract ticker of every brand and game system.
+- Faction Select — six category tiles (40k, Age of Sigmar, The Old World, Paint & Hobby, Trading Cards, Accessories).
+- Community bonus stage with Discord CTA.
+- How We Play — 3-column BROWSE / PAINT / PLAY manual plus per-store event calendar links.
+- Paint & Hobby accordion — every Vallejo, Scale 75, Two Thin Coats, Monument Hobbies, Citadel, Tamiya sub-line linked to the main shop.
+- TCGs accordion — all ten trading card games.
+- Codex Access accordion — every 40k, AoS, and Old World faction.
+- Photo Mode — filterable gallery of the shop photos.
+- Online Hub — Discord, Instagram, Facebook, full catalog.
+- Two Visit terminals with per-day hours tables, live open/closed status, correct addresses (220 North Colony St Ste C, Wallingford · 848 Farmington Ave Suite 2, Berlin), and holiday-closings note.
+- Sticky HUD with store selector (Wallingford / Berlin) that swaps the live status.
+- Mobile drawer with the same tree.
 
 ## Run locally
 
