@@ -1,24 +1,26 @@
 # Dragon's Lair Hobbies
 
-Zero-build static storefront for Dragon's Lair Hobbies — Connecticut's tabletop headquarters, with locations in Wallingford and Berlin.
+Official zero-build static storefront for Dragon's Lair Hobbies — Connecticut's tabletop hobby shop, with locations in Wallingford and Berlin.
 
-Rebuilt in the "Cabinet OS" pattern used across the shop's other sibling sites — a CRT arcade-cabinet interface (Press Start 2P + VT323, dark phosphor palette, sticky HUD with live open/closed status, boot screen, attract-mode marquee, chunky panels with hard drop-shadows) themed for tabletop instead of video games.
+## Design
 
-## What's here
+An adventurer's-tavern **quest board**. Warm parchment cards on tavern-wood dark backgrounds, wax-seal buttons, brass-gold rules and hand-lettered section headers. Cinzel + IM Fell English SC + Inter for typography; wax red (`#a4271a`) and brass (`#b78a2f`) accents on a burnished black-brown ground.
 
-- Boot / title-screen hero with attract-mode slideshow of the actual shop photos and a keyboard-navigable main menu.
-- Attract ticker of every brand and game system.
-- Faction Select — six category tiles (40k, Age of Sigmar, The Old World, Paint & Hobby, Trading Cards, Accessories).
-- Community bonus stage with Discord CTA.
-- How We Play — 3-column BROWSE / PAINT / PLAY manual plus per-store event calendar links.
-- Paint & Hobby accordion — every Vallejo, Scale 75, Two Thin Coats, Monument Hobbies, Citadel, Tamiya sub-line linked to the main shop.
-- TCGs accordion — all ten trading card games.
-- Codex Access accordion — every 40k, AoS, and Old World faction.
-- Photo Mode — filterable gallery of the shop photos.
-- Online Hub — Discord, Instagram, Facebook, full catalog.
-- Two Visit terminals with per-day hours tables, live open/closed status, correct addresses (220 North Colony St Ste C, Wallingford · 848 Farmington Ave Suite 2, Berlin), and holiday-closings note.
-- Sticky HUD with store selector (Wallingford / Berlin) that swaps the live status.
-- Mobile drawer with the same tree.
+## What's on the page
+
+- Hero **quest board** with wax seal and pinned pushpin — the brand notice.
+- Brand marquee ticker.
+- **The Table** — three-pillar house rules: Browse, Paint, Play.
+- **What We Carry** — six pinned quest cards for the top-level shelves (Warhammer 40k, Age of Sigmar, The Old World, Paint & Hobby, all TCGs, Accessories) + inline location cards with live open/closed.
+- **The Codex** — accordions grouped by category, mapping to every subcategory URL on the main shop: Warhammer 40k factions, Age of Sigmar + The Old World, Paint & Hobby ranges (Vallejo, Scale 75, Two Thin Coats, Monument Hobbies, Citadel, Tamiya), and all ten trading card games.
+- **Inside The Lair** — filterable photo gallery with lightbox.
+- **Rally Point** — Discord CTA plus panels for Discord / Instagram / Facebook / full catalog.
+- **FAQ** — six common visitor questions.
+- **Visit** — dual visit cards for Wallingford and Berlin: correct addresses (220 North Colony St Ste C · 848 Farmington Ave Suite 2), per-day hours tables, live open/closed status per store, directions and events-calendar buttons, copy-address, embedded maps.
+- Holiday closings note (Easter, Thanksgiving, Christmas).
+- Closing CTA band + footer with policy links + mobile quick-action dock.
+
+Logo is untouched.
 
 ## Run locally
 
@@ -26,4 +28,4 @@ Rebuilt in the "Cabinet OS" pattern used across the shop's other sibling sites �
 python3 -m http.server 4173
 ```
 
-Then open http://localhost:4173. Product catalog and checkout still link to the main dragonslairhobbies.com storefront.
+Open http://localhost:4173. Product catalog and checkout still live on dragonslairhobbies.com — every category link is wired there.
