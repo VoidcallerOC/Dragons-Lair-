@@ -3,56 +3,521 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Dragon's Lair Hobbies | Miniatures, Paints & Trading Cards</title>
-  <meta name="description" content="Dragon's Lair Hobbies: your home for Games Workshop, paints, trading card games, hobby supplies, and community gaming in Wallingford and Berlin, Connecticut." />
+  <title>Dragon's Lair Hobbies — Warhammer, Paints & TCGs in Wallingford & Berlin, CT</title>
+  <meta name="description" content="Connecticut's tabletop headquarters. Games Workshop, Magic: The Gathering, Pokémon, Yu-Gi-Oh!, Lorcana, Flesh & Blood, Gundam, Star Wars: Unlimited, Vallejo, Scale 75, Two Thin Coats — plus events, painting, and a community that plays. Wallingford + Berlin." />
+  <meta name="theme-color" content="#0e0b10" />
   <link rel="icon" href="/assets/img/favicon.svg" />
   <link rel="stylesheet" href="/assets/css/styles.css" />
 </head>
 <body>
-  <div class="announcement"><span>New arrivals weekly</span><span class="announce-sep">•</span><span>Two Connecticut locations</span><a href="#locations">Find your lair <span>↗</span></a></div>
-  <header class="site-header" id="top">
-    <div class="container nav-wrap">
-      <a class="brand" href="#top" aria-label="Dragon's Lair Hobbies home"><img src="/assets/img/dragons-lair-logo-transparent-final.png" alt="Dragon's Lair Hobbies" /></a>
-      <nav class="desktop-nav" aria-label="Primary navigation"><a href="#shop">Shop</a><a href="#categories">Categories</a><a href="#locations">Locations</a><a href="#community">Community</a></nav>
-      <div class="nav-actions"><button class="icon-btn" id="searchToggle" aria-label="Search">⌕</button><button class="cart-btn" id="cartButton" aria-label="Shopping cart">Cart <b id="cartCount">0</b></button><button class="menu-btn" id="menuToggle" aria-label="Open menu">☰</button></div>
+  <!-- Utility bar -->
+  <div class="utility">
+    <div class="container">
+      <div class="u-left">
+        <span><span class="dot"></span><b class="hide-sm" style="color:#c9c3b4">Open today</b><span class="hide-sm" style="margin-left:8px"><span id="todayHours">2–8&nbsp;PM</span></span></span>
+      </div>
+      <div class="u-right">
+        <a class="hide-sm" href="mailto:support@dragonslairhobbies.com">support@dragonslairhobbies.com</a>
+        <a href="https://dragonslairhobbies.com/wishlist/" target="_blank" rel="noopener">Wishlist</a>
+        <a href="https://dragonslairhobbies.com/my-account/" target="_blank" rel="noopener">My account</a>
+      </div>
     </div>
-    <div class="mobile-menu" id="mobileMenu"><a href="#shop">Shop</a><a href="#categories">Categories</a><a href="#locations">Locations</a><a href="#community">Community</a></div>
-    <div class="search-panel" id="searchPanel"><div class="container"><input id="searchInput" type="search" placeholder="Search miniatures, paints, cards..." aria-label="Search the catalog" /><span>Press Esc to close</span></div></div>
+  </div>
+
+  <!-- Announcement -->
+  <div class="announce">
+    <b>New arrivals weekly</b>
+    <span class="sep">✦</span>
+    Two Connecticut locations
+    <span class="sep">✦</span>
+    <a href="https://discord.gg/FJHbTKXFNC" target="_blank" rel="noopener" style="color:#ffe1a3;text-decoration:underline;text-underline-offset:4px">Join the Discord →</a>
+  </div>
+
+  <!-- Header -->
+  <header class="site-header" id="top">
+    <div class="container">
+      <a class="brand" href="#top" aria-label="Dragon's Lair Hobbies home">
+        <img src="/assets/img/dragons-lair-logo-transparent-final.png" alt="Dragon's Lair Hobbies" />
+      </a>
+      <nav class="desktop-nav" aria-label="Primary">
+        <a href="#modeling">Games Workshop</a>
+        <a href="#paints">Paint &amp; Hobby</a>
+        <a href="#tcg">Trading Cards</a>
+        <a href="#accessories">Accessories</a>
+        <a href="#locations">Locations</a>
+        <a href="#community">Community</a>
+      </nav>
+      <div class="nav-actions">
+        <button class="icon-btn" id="searchToggle" aria-label="Search">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+        </button>
+        <button class="icon-btn" id="wishToggle" aria-label="Wishlist">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 21s-7-4.4-9.5-9A5.5 5.5 0 0 1 12 6a5.5 5.5 0 0 1 9.5 6C19 16.6 12 21 12 21z"/></svg>
+        </button>
+        <button class="cart-btn" id="cartButton" aria-label="Shopping cart">
+          Cart <b id="cartCount">0</b>
+        </button>
+        <button class="menu-btn" id="menuToggle" aria-label="Open menu">☰</button>
+      </div>
+    </div>
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="#modeling">Games Workshop</a>
+      <a href="#paints">Paint &amp; Hobby</a>
+      <a href="#tcg">Trading Cards</a>
+      <a href="#accessories">Accessories</a>
+      <a href="#locations">Locations</a>
+      <a href="#community">Community</a>
+      <a href="mailto:support@dragonslairhobbies.com">support@dragonslairhobbies.com</a>
+    </div>
+    <div class="search-panel" id="searchPanel">
+      <div class="container">
+        <input id="searchInput" type="search" placeholder="Search Warhammer, Magic, paints, dice…" aria-label="Search" />
+        <span class="hint">Press Esc to close</span>
+      </div>
+    </div>
   </header>
 
-  <main>
-    <section class="hero" id="shop">
-      <div class="hero-glow"></div><div class="hero-grid"></div>
-      <div class="container hero-inner">
-        <div class="hero-copy"><p class="eyebrow"><span></span> Connecticut's hobby headquarters</p><h1>Your hobby<br /><em>starts here.</em></h1><p class="hero-lede">Miniatures, paints, cards, and the people who make every game worth gathering for.</p><div class="hero-actions"><a class="button button-red" href="#categories">Explore the shelves <span>↗</span></a><a class="text-link" href="#locations">Visit a location <span>↗</span></a></div></div>
-        
+  <!-- Store selector -->
+  <div class="store-bar">
+    <div class="container">
+      <span class="label">You're shopping:</span>
+      <button class="store-chip active" data-store="wallingford">Wallingford</button>
+      <button class="store-chip" data-store="berlin">Berlin</button>
+      <div class="hours-inline">
+        <span class="status-dot"></span>
+        <span id="openStatus" style="color:#c9c3b4">Open now</span>
+        <span style="opacity:.4;margin:0 6px">·</span>
+        <span id="closeTime">Closes 8 PM</span>
       </div>
-      <div class="hero-bottom container"><span>Games Workshop</span><span>Trading cards</span><span>Painting supplies</span><span>Tabletop community</span></div>
+    </div>
+  </div>
+
+  <main>
+    <!-- ============ HERO ============ -->
+    <section class="hero">
+      <div class="container">
+        <div class="hero-copy">
+          <p class="eyebrow">Connecticut's tabletop headquarters</p>
+          <h1>Roll for<br /><em>initiative.</em><br />Stay for the <span class="brass">crew.</span></h1>
+          <p class="lede">Warhammer, Magic, Pokémon, paints, sleeves, dice — and the people who make every game night worth showing up for.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#modeling">
+              Explore the shelves
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+            <a class="text-link" href="#locations">Visit a location →</a>
+          </div>
+
+          <div class="trust">
+            <div class="item"><div class="num">2</div><div class="lbl">Connecticut stores</div></div>
+            <div class="item"><div class="num">10+</div><div class="lbl">TCGs stocked</div></div>
+            <div class="item"><div class="num">40k</div><div class="lbl">Armies painted here</div></div>
+            <div class="item"><div class="num">7</div><div class="lbl">Nights a week open*</div></div>
+          </div>
+        </div>
+
+        <aside class="hero-visual" aria-hidden="true">
+          <div class="frame">
+            <div class="glow"></div>
+            <div class="runes">✦ ✧ ✦</div>
+            <div class="plate">
+              <div class="cornerA"><span>The Lair</span><span>Est. Wallingford + Berlin</span></div>
+              <div class="center">
+                <div class="huge">d20</div>
+                <div class="caption">— nat 20 or nothing —</div>
+              </div>
+              <div class="cornerB"><span>W40K · MTG · POKÉMON</span><span>PAINT · DICE · SLEEVES</span></div>
+            </div>
+          </div>
+        </aside>
+      </div>
     </section>
 
-    <section class="section paper" id="categories"><div class="container"><div class="section-heading"><div><p class="eyebrow dark"><span></span> Browse the collection</p><h2>Find your <em>faction.</em></h2></div><a class="text-link dark-link" href="#categories">View all categories <span>↗</span></a></div>
-      <div class="category-grid" id="categoryGrid">
-        <a class="category-card featured" href="#catalog" data-category="Warhammer 40k"><div class="category-art art-40k"><span class="art-symbol">✦</span></div><div><small>Games Workshop</small><h3>Warhammer 40,000</h3><span class="card-arrow">↗</span></div></a>
-        <a class="category-card" href="#catalog" data-category="Age of Sigmar"><div class="category-art art-aos"><span class="art-symbol">⚡</span></div><div><small>Games Workshop</small><h3>Age of Sigmar</h3><span class="card-arrow">↗</span></div></a>
-        <a class="category-card" href="#catalog" data-category="Paints"><div class="category-art art-paint"><span class="paint-swatch"></span></div><div><small>Build your palette</small><h3>Paint & Hobby</h3><span class="card-arrow">↗</span></div></a>
-        <a class="category-card" href="#catalog" data-category="Trading Cards"><div class="category-art art-cards"><span class="card-stack">▰</span></div><div><small>Shuffle up</small><h3>Trading Card Games</h3><span class="card-arrow">↗</span></div></a>
+    <!-- Brand marquee -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track">
+        <span>Games Workshop</span><span>Citadel</span><span>Vallejo</span><span>Scale 75</span><span>Two Thin Coats</span><span>Monument Hobbies</span><span>Tamiya</span><span>Chessex</span><span>Dragon Shield</span><span>Magic: The Gathering</span><span>Pokémon</span><span>Yu-Gi-Oh!</span><span>Lorcana</span><span>Flesh &amp; Blood</span><span>Gundam</span><span>Riftbound</span><span>Star Wars: Unlimited</span><span>Altered</span><span>Elestrals</span>
+        <span>Games Workshop</span><span>Citadel</span><span>Vallejo</span><span>Scale 75</span><span>Two Thin Coats</span><span>Monument Hobbies</span><span>Tamiya</span><span>Chessex</span><span>Dragon Shield</span><span>Magic: The Gathering</span><span>Pokémon</span><span>Yu-Gi-Oh!</span><span>Lorcana</span><span>Flesh &amp; Blood</span><span>Gundam</span><span>Riftbound</span><span>Star Wars: Unlimited</span><span>Altered</span><span>Elestrals</span>
       </div>
-    </div></section>
+    </div>
 
-    <section class="catalog-section" id="catalog"><div class="container"><div class="catalog-intro"><p class="eyebrow"><span></span> On the shelves now</p><h2>Stock up for<br /><em>game night.</em></h2><p>From your first paint set to the centerpiece of your next army, we keep the essentials close and the good stuff moving.</p></div><div class="product-grid">
-      <article class="product-card"><div class="product-visual v-paints"><span>PAINT<br />LAB</span></div><div class="product-meta"><small>Hobby supplies</small><h3>Build your palette</h3><a href="#categories">Shop paints <span>↗</span></a></div></article>
-      <article class="product-card"><div class="product-visual v-mini"><span class="mini-silhouette">♜</span></div><div class="product-meta"><small>Games Workshop</small><h3>Raise an army</h3><a href="#categories">Shop miniatures <span>↗</span></a></div></article>
-      <article class="product-card"><div class="product-visual v-cards"><span>DRAW<br />YOUR<br />FATE</span></div><div class="product-meta"><small>Trading card games</small><h3>Chase the pull</h3><a href="#categories">Shop cards <span>↗</span></a></div></article>
-    </div></div></section>
+    <!-- ============ MODELING & PAINTING ============ -->
+    <section class="section dark" id="modeling">
+      <div class="container">
+        <div class="sec-head">
+          <div>
+            <p class="eyebrow">Modeling &amp; painting</p>
+            <h2>Pick your <em>faction.</em></h2>
+          </div>
+          <div class="head-side">
+            <p>The complete Games Workshop shelf — 40k, Age of Sigmar, The Old World, Citadel paints, and Black Library — kept in stock and moving.</p>
+            <a class="text-link" href="https://dragonslairhobbies.com/warhammer/" target="_blank" rel="noopener">View full Warhammer catalog →</a>
+          </div>
+        </div>
 
-    <section class="shop-gallery paper" id="shop-gallery"><div class="container"><div class="section-heading"><div><p class="eyebrow dark"><span></span> Inside Dragon's Lair</p><h2>See what's<br /><em>in the lair.</em></h2></div><a class="text-link dark-link" href="#locations">Plan your visit <span>↗</span></a></div><div class="gallery-grid"><button class="gallery-photo photo-wide" data-full="/assets/img/shop/IMG_2399.JPG"><img src="/assets/img/shop/IMG_2399.JPG" alt="Wall of Warhammer paints and hobby supplies" loading="lazy"><span>Paint & hobby supplies</span></button><button class="gallery-photo" data-full="/assets/img/shop/IMG_2400.JPG"><img src="/assets/img/shop/IMG_2400.JPG" alt="Warhammer display at Dragon's Lair" loading="lazy"><span>Warhammer displays</span></button><button class="gallery-photo" data-full="/assets/img/shop/IMG_2396.JPG"><img src="/assets/img/shop/IMG_2396.JPG" alt="Trading card products on display" loading="lazy"><span>Trading cards</span></button><button class="gallery-photo" data-full="/assets/img/shop/IMG_2402.JPG"><img src="/assets/img/shop/IMG_2402.JPG" alt="Trading card booster products" loading="lazy"><span>New releases</span></button><button class="gallery-photo photo-tall" data-full="/assets/img/shop/IMG_2397-a.JPG"><img src="/assets/img/shop/IMG_2397-a.JPG" alt="Players gathered around tables for game night" loading="lazy"><span>Game night</span></button><button class="gallery-photo" data-full="/assets/img/shop/IMG_2403-a.JPG"><img src="/assets/img/shop/IMG_2403-a.JPG" alt="Community event at Dragon's Lair" loading="lazy"><span>Community events</span></button><button class="gallery-photo" data-full="/assets/img/shop/IMG_2405.JPG"><img src="/assets/img/shop/IMG_2405.JPG" alt="Card sleeves and accessories display" loading="lazy"><span>Accessories</span></button><button class="gallery-photo" data-full="/assets/img/shop/IMG_2404.JPG"><img src="/assets/img/shop/IMG_2404.JPG" alt="Games and books on store shelves" loading="lazy"><span>Browse the shelves</span></button><button class="gallery-photo" data-full="/assets/img/shop/IMG_2398.JPG"><img src="/assets/img/shop/IMG_2398.JPG" alt="Featured boxed miniature set" loading="lazy"><span>Featured finds</span></button><button class="gallery-photo" data-full="/assets/img/shop/IMG_2401-a.JPG"><img src="/assets/img/shop/IMG_2401-a.JPG" alt="Dragon's Lair event booth" loading="lazy"><span>Out in the community</span></button></div></div></section>
-    <div class="lightbox" id="lightbox" aria-hidden="true"><button class="lightbox-close" aria-label="Close photo">×</button><img id="lightboxImage" alt=""></div>
-    <section class="locations" id="locations"><div class="container location-grid"><div class="location-copy"><p class="eyebrow"><span></span> Two lairs, one community</p><h2>Meet us<br /><em>at the table.</em></h2><p>Come browse the shelves, get advice from someone who has painted that model, or find a table and stay for a game.</p><a class="button button-outline" href="mailto:support@dragonslairhobbies.com">Ask a hobby question <span>↗</span></a></div><div class="location-cards"><article class="location-card"><span class="location-number">01</span><div><h3>Dragon's Lair <em>Wallingford</em></h3><p>1093 North Colony Road<br />Wallingford, CT</p><a href="https://maps.google.com/?q=1093+North+Colony+Road+Wallingford+CT" target="_blank" rel="noopener">Get directions ↗</a></div></article><article class="location-card"><span class="location-number">02</span><div><h3>Dragon's Lair <em>Berlin</em></h3><p>Connecticut's tabletop destination<br />Berlin, CT</p><a href="https://dragonslairhobbies.com/dragons-lair-locations/" target="_blank" rel="noopener">Store details ↗</a></div></article></div></div></section>
+        <div class="tiles">
+          <a class="tile hero-tile" href="https://dragonslairhobbies.com/warhammer-40k/" target="_blank" rel="noopener" data-cat="Warhammer 40k">
+            <div class="bg bg-40k"></div>
+            <div><small>Games Workshop</small><h3>Warhammer <em>40,000</em></h3></div>
+            <div><small style="opacity:.6">Space Marines · Chaos · Xenos · Imperium — every faction, every shelf.</small></div>
+            <span class="arrow">↗</span>
+          </a>
+          <a class="tile" href="https://dragonslairhobbies.com/warhammer-age-of-sigmar/" target="_blank" rel="noopener" data-cat="Age of Sigmar">
+            <div class="bg bg-aos"></div>
+            <div><small>Games Workshop</small><h3>Age of <em>Sigmar</em></h3></div>
+            <span class="arrow">↗</span>
+          </a>
+          <a class="tile" href="https://dragonslairhobbies.com/warhammer-the-old-world/" target="_blank" rel="noopener" data-cat="The Old World">
+            <div class="bg bg-oldworld"></div>
+            <div><small>Games Workshop</small><h3>The <em>Old World</em></h3></div>
+            <span class="arrow">↗</span>
+          </a>
+          <a class="tile" href="https://dragonslairhobbies.com/citadel/" target="_blank" rel="noopener" data-cat="Citadel">
+            <div class="bg bg-citadel"></div>
+            <div><small>Citadel Colour</small><h3>Base · Layer · Shade</h3></div>
+            <span class="arrow">↗</span>
+          </a>
+          <a class="tile" href="https://dragonslairhobbies.com/subcategory/warhammer-black-library/" target="_blank" rel="noopener" data-cat="Black Library">
+            <div class="bg bg-black-lib"></div>
+            <div><small>Warhammer</small><h3>Black <em>Library</em></h3></div>
+            <span class="arrow">↗</span>
+          </a>
+        </div>
+      </div>
+    </section>
 
-    <section class="community paper" id="community"><div class="container community-grid"><div><p class="eyebrow dark"><span></span> More than a shop</p><h2>Bring your<br /><em>party.</em></h2></div><div><p class="community-lede">Dragon's Lair is where hobbyists, collectors, and players find their next obsession—and each other.</p><div class="community-links"><a href="https://dragonslairhobbies.com/contact-us/" target="_blank" rel="noopener"><span>01</span> Contact the team <b>↗</b></a><a href="https://dragonslairhobbies.com/dragons-lair-locations/" target="_blank" rel="noopener"><span>02</span> Store events & locations <b>↗</b></a><a href="https://dragonslairhobbies.com/shop/" target="_blank" rel="noopener"><span>03</span> Visit the full catalog <b>↗</b></a></div></div></div></section>
+    <!-- ============ PAINTS ============ -->
+    <section class="section panel" id="paints">
+      <div class="container">
+        <div class="sec-head">
+          <div>
+            <p class="eyebrow dark">Paint &amp; hobby supplies</p>
+            <h2>Build your <em>palette.</em></h2>
+          </div>
+          <div class="head-side">
+            <p style="color:var(--muted-2)">Every major paint line under one roof — from Citadel to Two Thin Coats. Primer, wash, dry, spray, brush, base.</p>
+            <a class="text-link dark" href="https://dragonslairhobbies.com/paint/" target="_blank" rel="noopener">Shop paints &amp; hobby →</a>
+          </div>
+        </div>
+
+        <div class="brand-rail">
+          <a class="brand-card" href="https://dragonslairhobbies.com/category/vallejo/" target="_blank" rel="noopener" data-cat="Vallejo">
+            <div><small>Paint line</small><div class="b-name">Vallejo</div></div>
+            <div class="b-meta">16 ranges · Model, Game, Metal, Xpress ↗</div>
+          </a>
+          <a class="brand-card" href="https://dragonslairhobbies.com/category/scale-75/" target="_blank" rel="noopener" data-cat="Scale 75">
+            <div><small>Paint line</small><div class="b-name">Scale 75</div></div>
+            <div class="b-meta">Fantasy · Metal &lsquo;N Alchemy · Warfront ↗</div>
+          </a>
+          <a class="brand-card" href="https://dragonslairhobbies.com/category/two-thin-coats-paints/" target="_blank" rel="noopener" data-cat="Two Thin Coats">
+            <div><small>Duncan Rhodes</small><div class="b-name">Two Thin Coats</div></div>
+            <div class="b-meta">Highlight · Midtone · Shadow · Wash ↗</div>
+          </a>
+          <a class="brand-card" href="https://dragonslairhobbies.com/category/monument-hobbies/" target="_blank" rel="noopener" data-cat="Monument">
+            <div><small>Pro Acryl</small><div class="b-name">Monument Hobbies</div></div>
+            <div class="b-meta">Paint · Primer · Mediums · Textures ↗</div>
+          </a>
+          <a class="brand-card" href="https://dragonslairhobbies.com/subcategory/tamiya/" target="_blank" rel="noopener" data-cat="Tamiya">
+            <div><small>Modeling</small><div class="b-name">Tamiya</div></div>
+            <div class="b-meta">Sprays · Enamels · Weathering ↗</div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ TRADING CARD GAMES ============ -->
+    <section class="section dark" id="tcg">
+      <div class="container">
+        <div class="sec-head">
+          <div>
+            <p class="eyebrow">Trading card games</p>
+            <h2>Shuffle up &amp; <em>play.</em></h2>
+          </div>
+          <div class="head-side">
+            <p>Ten TCGs. Weekly events at both locations. Singles, sealed, and everything in between — plus tables and opponents.</p>
+            <a class="text-link" href="https://dragonslairhobbies.com/trading-card-games/" target="_blank" rel="noopener">Full TCG shop →</a>
+          </div>
+        </div>
+
+        <div class="tiles" style="grid-template-columns:repeat(5,1fr);grid-auto-rows:210px">
+          <a class="tile wide" href="https://dragonslairhobbies.com/magic-the-gathering/" target="_blank" rel="noopener" data-cat="Magic: The Gathering">
+            <div class="bg bg-mtg"></div>
+            <div><small>Wizards of the Coast</small><h3>Magic: <em>The Gathering</em></h3></div>
+            <span class="arrow">↗</span>
+          </a>
+          <a class="tile" href="https://dragonslairhobbies.com/pokemon/" target="_blank" rel="noopener" data-cat="Pokemon">
+            <div class="bg bg-pokemon"></div>
+            <div><small>The Pokémon Co.</small><h3>Pokémon TCG</h3></div>
+            <span class="arrow">↗</span>
+          </a>
+          <a class="tile" href="https://dragonslairhobbies.com/yu-gi-oh/" target="_blank" rel="noopener" data-cat="Yu-Gi-Oh">
+            <div class="bg bg-yugioh"></div>
+            <div><small>Konami</small><h3>Yu-Gi-Oh!</h3></div>
+            <span class="arrow">↗</span>
+          </a>
+          <a class="tile" href="https://dragonslairhobbies.com/gundam-card-game/" target="_blank" rel="noopener" data-cat="Gundam">
+            <div class="bg bg-gundam"></div>
+            <div><small>Bandai</small><h3>Gundam</h3></div>
+            <span class="arrow">↗</span>
+          </a>
+          <a class="tile" href="https://dragonslairhobbies.com/flesh-and-blood/" target="_blank" rel="noopener" data-cat="Flesh and Blood">
+            <div class="bg bg-fab"></div>
+            <div><small>Legend Story</small><h3>Flesh &amp; <em>Blood</em></h3></div>
+            <span class="arrow">↗</span>
+          </a>
+          <a class="tile" href="https://dragonslairhobbies.com/riftbound/" target="_blank" rel="noopener" data-cat="Riftbound">
+            <div class="bg bg-riftbound"></div>
+            <div><small>Riot Forge</small><h3>Riftbound</h3></div>
+            <span class="arrow">↗</span>
+          </a>
+          <a class="tile" href="https://dragonslairhobbies.com/star-wars-unlimited/" target="_blank" rel="noopener" data-cat="Star Wars Unlimited">
+            <div class="bg bg-swu"></div>
+            <div><small>Fantasy Flight</small><h3>Star Wars: <em>Unlimited</em></h3></div>
+            <span class="arrow">↗</span>
+          </a>
+          <a class="tile" href="https://dragonslairhobbies.com/lorcana/" target="_blank" rel="noopener" data-cat="Lorcana">
+            <div class="bg bg-lorcana"></div>
+            <div><small>Ravensburger</small><h3>Lorcana</h3></div>
+            <span class="arrow">↗</span>
+          </a>
+          <a class="tile" href="https://dragonslairhobbies.com/altered/" target="_blank" rel="noopener" data-cat="Altered">
+            <div class="bg bg-altered"></div>
+            <div><small>Equinox</small><h3>Altered</h3></div>
+            <span class="arrow">↗</span>
+          </a>
+          <a class="tile" href="https://dragonslairhobbies.com/subcategory/elestrals/" target="_blank" rel="noopener" data-cat="Elestrals">
+            <div class="bg bg-elestrals"></div>
+            <div><small>Elestrals</small><h3>Elestrals</h3></div>
+            <span class="arrow">↗</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ ACCESSORIES ============ -->
+    <section class="section panel" id="accessories">
+      <div class="container">
+        <div class="sec-head">
+          <div>
+            <p class="eyebrow dark">Accessories</p>
+            <h2>Sleeves, dice, <em>gear.</em></h2>
+          </div>
+          <div class="head-side">
+            <p style="color:var(--muted-2)">The essentials that keep the game moving — protection for your cards, tools for your paint desk, and dice for every occasion.</p>
+          </div>
+        </div>
+        <div class="access">
+          <a class="card" href="https://dragonslairhobbies.com/chessex/" target="_blank" rel="noopener" data-cat="Chessex">
+            <div><small>Dice</small><h4>Chessex</h4></div>
+            <div class="g" style="background:radial-gradient(circle at 30% 30%,#e63b26,#3a1420)"></div>
+          </a>
+          <a class="card" href="https://dragonslairhobbies.com/subcategory/dragon-shield/" target="_blank" rel="noopener" data-cat="Dragon Shield">
+            <div><small>Card sleeves</small><h4>Dragon Shield</h4></div>
+            <div class="g" style="background:radial-gradient(circle at 30% 30%,#c9a44a,#241826)"></div>
+          </a>
+          <a class="card" href="https://dragonslairhobbies.com/subcategory/element-card-sleeves/" target="_blank" rel="noopener" data-cat="Element">
+            <div><small>Card sleeves</small><h4>Element Sleeves</h4></div>
+            <div class="g" style="background:radial-gradient(circle at 30% 30%,#3ca57a,#0e1e14)"></div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ GALLERY ============ -->
+    <section class="gallery" id="gallery">
+      <div class="container">
+        <div class="sec-head">
+          <div>
+            <p class="eyebrow">Inside the lair</p>
+            <h2>See what's on the <em>shelves.</em></h2>
+          </div>
+          <div class="head-side">
+            <p>Weekly restocks, freshly painted display models, a wall of paints, and tables that stay booked.</p>
+            <a class="text-link" href="#locations">Plan your visit →</a>
+          </div>
+        </div>
+        <div class="gallery-grid">
+          <button class="gphoto wide" data-full="/assets/img/shop/IMG_2399.JPG"><img src="/assets/img/shop/IMG_2399.JPG" alt="Wall of Warhammer paints and hobby supplies" loading="lazy"><span class="cap">Paint &amp; hobby wall</span></button>
+          <button class="gphoto" data-full="/assets/img/shop/IMG_2400.JPG"><img src="/assets/img/shop/IMG_2400.JPG" alt="Warhammer displays" loading="lazy"><span class="cap">Warhammer displays</span></button>
+          <button class="gphoto tall" data-full="/assets/img/shop/IMG_2397-a.JPG"><img src="/assets/img/shop/IMG_2397-a.JPG" alt="Players gathered around tables for game night" loading="lazy"><span class="cap">Game night</span></button>
+          <button class="gphoto" data-full="/assets/img/shop/IMG_2396.JPG"><img src="/assets/img/shop/IMG_2396.JPG" alt="Trading card products on display" loading="lazy"><span class="cap">Trading cards</span></button>
+          <button class="gphoto" data-full="/assets/img/shop/IMG_2402.JPG"><img src="/assets/img/shop/IMG_2402.JPG" alt="Trading card booster products" loading="lazy"><span class="cap">New releases</span></button>
+          <button class="gphoto" data-full="/assets/img/shop/IMG_2405.JPG"><img src="/assets/img/shop/IMG_2405.JPG" alt="Card sleeves and accessories" loading="lazy"><span class="cap">Accessories</span></button>
+          <button class="gphoto" data-full="/assets/img/shop/IMG_2404.JPG"><img src="/assets/img/shop/IMG_2404.JPG" alt="Store shelves" loading="lazy"><span class="cap">Browse the aisles</span></button>
+          <button class="gphoto" data-full="/assets/img/shop/IMG_2398.JPG"><img src="/assets/img/shop/IMG_2398.JPG" alt="Featured boxed miniature set" loading="lazy"><span class="cap">Featured finds</span></button>
+          <button class="gphoto wide" data-full="/assets/img/shop/IMG_2403-a.JPG"><img src="/assets/img/shop/IMG_2403-a.JPG" alt="Community event" loading="lazy"><span class="cap">Community events</span></button>
+          <button class="gphoto" data-full="/assets/img/shop/IMG_2401-a.JPG"><img src="/assets/img/shop/IMG_2401-a.JPG" alt="Dragon's Lair event booth" loading="lazy"><span class="cap">Out in the community</span></button>
+        </div>
+      </div>
+    </section>
+    <div class="lightbox" id="lightbox" aria-hidden="true">
+      <button class="lclose" aria-label="Close photo">×</button>
+      <img id="lightboxImage" alt="" />
+    </div>
+
+    <!-- ============ LOCATIONS ============ -->
+    <section class="section locations" id="locations">
+      <div class="container">
+        <div class="sec-head">
+          <div>
+            <p class="eyebrow">Two lairs, one community</p>
+            <h2>Meet us at the <em>table.</em></h2>
+          </div>
+          <div class="head-side">
+            <p>Two Connecticut storefronts, seven-days-a-week play (mostly — Berlin sleeps on Mondays). Come browse, paint, or find a table.</p>
+          </div>
+        </div>
+
+        <div class="loc-grid">
+          <article class="loc-card">
+            <div class="num">Location 01</div>
+            <h3>Dragon's Lair <em>Wallingford</em></h3>
+            <p class="addr">220 North Colony St, Ste C<br />Wallingford, CT 06492</p>
+            <div class="hours">
+              <div class="row"><span class="day">Sunday</span><span class="time">10 AM – 6 PM</span></div>
+              <div class="row"><span class="day">Monday</span><span class="time">2 – 8 PM</span></div>
+              <div class="row"><span class="day">Tuesday</span><span class="time">2 – 8 PM</span></div>
+              <div class="row"><span class="day">Wednesday</span><span class="time">2 – 8 PM</span></div>
+              <div class="row"><span class="day">Thursday</span><span class="time">2 – 9 PM</span></div>
+              <div class="row"><span class="day">Friday</span><span class="time">2 – 10:30 PM</span></div>
+              <div class="row"><span class="day">Saturday</span><span class="time">10 AM – 6 PM</span></div>
+            </div>
+            <div class="actions">
+              <a class="btn btn-primary" href="https://maps.google.com/?q=220+North+Colony+St+Ste+C+Wallingford+CT+06492" target="_blank" rel="noopener">Get directions ↗</a>
+              <a class="btn btn-ghost" href="https://dragonslairhobbies.com/dragons-lair-wallingford/" target="_blank" rel="noopener">Events calendar</a>
+            </div>
+          </article>
+
+          <article class="loc-card">
+            <div class="num">Location 02</div>
+            <h3>Dragon's Lair <em>Berlin</em></h3>
+            <p class="addr">848 Farmington Ave, Suite 2<br />Berlin, CT 06037</p>
+            <div class="hours">
+              <div class="row"><span class="day">Sunday</span><span class="time">10 AM – 6 PM</span></div>
+              <div class="row closed"><span class="day">Monday</span><span class="time">Closed</span></div>
+              <div class="row"><span class="day">Tuesday</span><span class="time">2 – 8 PM</span></div>
+              <div class="row"><span class="day">Wednesday</span><span class="time">2 – 8 PM</span></div>
+              <div class="row"><span class="day">Thursday</span><span class="time">2 – 9 PM</span></div>
+              <div class="row"><span class="day">Friday</span><span class="time">2 – 10:30 PM</span></div>
+              <div class="row"><span class="day">Saturday</span><span class="time">10 AM – 6 PM</span></div>
+            </div>
+            <div class="actions">
+              <a class="btn btn-primary" href="https://maps.google.com/?q=848+Farmington+Ave+Suite+2+Berlin+CT+06037" target="_blank" rel="noopener">Get directions ↗</a>
+              <a class="btn btn-ghost" href="https://dragonslairhobbies.com/dragons-lair-berlin/" target="_blank" rel="noopener">Events calendar</a>
+            </div>
+          </article>
+        </div>
+
+        <div class="holiday">
+          <div class="lbl">Holiday closings</div>
+          <p>Both stores close on Easter Sunday, Thanksgiving, and Christmas. Follow us on socials for additional closings or modified hours.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ COMMUNITY ============ -->
+    <section class="community" id="community">
+      <div class="container">
+        <div>
+          <p class="eyebrow">More than a shop</p>
+          <h2>Bring your <em>party.</em></h2>
+          <p class="lede">Dragon's Lair is where hobbyists, collectors, and players find their next obsession — and each other. Weekly events, painting hangs, prereleases, launches, casual tables.</p>
+          <a class="btn btn-brass" href="https://discord.gg/FJHbTKXFNC" target="_blank" rel="noopener">
+            Join the Discord
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+        </div>
+
+        <div class="socials">
+          <a class="social-row discord" href="https://discord.gg/FJHbTKXFNC" target="_blank" rel="noopener">
+            <span class="icon"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.3 4.4A19.8 19.8 0 0 0 15.5 3l-.2.4a17 17 0 0 1 4.2 1.3 15.6 15.6 0 0 0-8.9-1 15.4 15.4 0 0 0-2.6.6 17.6 17.6 0 0 1 4-1.3L11.7 3a19.8 19.8 0 0 0-4.8 1.4C3.5 9 2.6 13.4 3.1 17.7A20 20 0 0 0 9 20.6l.6-1c-.9-.3-1.7-.7-2.5-1.2l.5-.4a13.9 13.9 0 0 0 12.7 0l.5.4c-.8.5-1.6.9-2.5 1.2l.6 1a20 20 0 0 0 5.9-2.9c.5-4.7-.4-9-3.5-13.3zM9.5 15c-1 0-1.8-1-1.8-2.2s.8-2.2 1.8-2.2 1.8 1 1.8 2.2S10.5 15 9.5 15zm5 0c-1 0-1.8-1-1.8-2.2s.8-2.2 1.8-2.2 1.8 1 1.8 2.2-.8 2.2-1.8 2.2z"/></svg></span>
+            <div><h4>Discord</h4><small>Live chat, event pings, painting help</small></div>
+            <span class="go">Join ↗</span>
+          </a>
+          <a class="social-row instagram" href="https://www.instagram.com/dragonslairtcg/" target="_blank" rel="noopener">
+            <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></span>
+            <div><h4>Instagram</h4><small>@dragonslairtcg — new arrivals, painted minis</small></div>
+            <span class="go">Follow ↗</span>
+          </a>
+          <a class="social-row facebook" href="https://www.facebook.com/DragonsLairTCG/" target="_blank" rel="noopener">
+            <span class="icon"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M13 21v-7h2.5l.5-3H13V9c0-.9.3-1.5 1.5-1.5H16V5h-2.2C11.6 5 10 6.3 10 8.5V11H8v3h2v7h3z"/></svg></span>
+            <div><h4>Facebook</h4><small>Events, hours updates, store news</small></div>
+            <span class="go">Follow ↗</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT STRIP ============ -->
+    <section class="contact-strip">
+      <div class="container">
+        <div>
+          <p class="eyebrow dark">Get in touch</p>
+          <h3>Questions? <em>Ask a hobbyist.</em></h3>
+          <p class="fine" style="margin-top:14px;font-size:14px;color:var(--muted-2);letter-spacing:0;font-family:var(--sans)">Painting help, army lists, event schedules, special orders — reach the team directly.</p>
+        </div>
+        <div>
+          <form onsubmit="event.preventDefault(); document.getElementById('toast').textContent='Thanks — we\\'ll be in touch soon.'; document.getElementById('toast').classList.add('show'); setTimeout(()=>document.getElementById('toast').classList.remove('show'),2600);">
+            <input type="email" required placeholder="you@yourhouse.com" aria-label="Your email" />
+            <a class="btn btn-dark" href="mailto:support@dragonslairhobbies.com" style="flex-shrink:0">Email us ↗</a>
+          </form>
+          <div class="fine">Or write us at <a href="mailto:support@dragonslairhobbies.com">support@dragonslairhobbies.com</a></div>
+        </div>
+      </div>
+    </section>
   </main>
-  <footer class="site-footer"><div class="container footer-top"><a class="brand" href="#top"><img src="/assets/img/dragons-lair-logo-transparent-final.png" alt="Dragon's Lair Hobbies" /></a><p>Roll for initiative.<br />Stay for the community.</p><div class="footer-links"><a href="#shop">Shop</a><a href="#locations">Locations</a><a href="mailto:support@dragonslairhobbies.com">Contact</a></div></div><div class="container footer-bottom"><span>© <span id="year"></span> Dragon's Lair Hobbies</span><span>Wallingford · Berlin · Connecticut</span></div></footer>
-  <div class="toast" id="toast" role="status">Your cart is ready for the next quest.</div>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="about-col">
+          <img src="/assets/img/dragons-lair-logo-transparent-final.png" alt="Dragon's Lair Hobbies" />
+          <p>Connecticut's tabletop headquarters — Warhammer, paints, trading card games, and the community that plays them. Wallingford &amp; Berlin.</p>
+          <div class="footer-social">
+            <a href="https://www.facebook.com/DragonsLairTCG/" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M13 21v-7h2.5l.5-3H13V9c0-.9.3-1.5 1.5-1.5H16V5h-2.2C11.6 5 10 6.3 10 8.5V11H8v3h2v7h3z"/></svg></a>
+            <a href="https://www.instagram.com/dragonslairtcg/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></a>
+            <a href="https://discord.gg/FJHbTKXFNC" target="_blank" rel="noopener" aria-label="Discord"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20 5a17 17 0 0 0-4.5-1.3l-.2.4c1.4.3 2.7.9 3.9 1.6a15 15 0 0 0-11.5-.6l-.2.1c1.2-.7 2.5-1.3 4-1.6l-.2-.4A17 17 0 0 0 6 5C3.4 8.9 2.5 12.7 3 16.7A18 18 0 0 0 8 19l1-1.4c-1-.4-1.9-.8-2.7-1.4l.2-.2a12 12 0 0 0 11 0l.2.2c-.8.6-1.7 1-2.7 1.4l1 1.4a18 18 0 0 0 5-2.4c.5-4.2-.4-8-3-11.6zM10 15c-1 0-1.7-.9-1.7-2s.7-2 1.7-2 1.7.9 1.7 2-.8 2-1.7 2zm5 0c-1 0-1.7-.9-1.7-2s.7-2 1.7-2 1.7.9 1.7 2-.7 2-1.7 2z"/></svg></a>
+          </div>
+        </div>
+        <div>
+          <h5>Shop</h5>
+          <ul>
+            <li><a href="https://dragonslairhobbies.com/warhammer/" target="_blank" rel="noopener">Games Workshop</a></li>
+            <li><a href="https://dragonslairhobbies.com/paint/" target="_blank" rel="noopener">Paint &amp; Hobby</a></li>
+            <li><a href="https://dragonslairhobbies.com/trading-card-games/" target="_blank" rel="noopener">Trading Cards</a></li>
+            <li><a href="https://dragonslairhobbies.com/accessories/" target="_blank" rel="noopener">Accessories</a></li>
+            <li><a href="https://dragonslairhobbies.com/shop/" target="_blank" rel="noopener">Full catalog</a></li>
+          </ul>
+        </div>
+        <div>
+          <h5>Visit</h5>
+          <ul>
+            <li><a href="https://dragonslairhobbies.com/dragons-lair-wallingford/" target="_blank" rel="noopener">Wallingford</a></li>
+            <li><a href="https://dragonslairhobbies.com/dragons-lair-berlin/" target="_blank" rel="noopener">Berlin</a></li>
+            <li><a href="https://dragonslairhobbies.com/dragons-lair-locations/" target="_blank" rel="noopener">All locations</a></li>
+            <li><a href="https://discord.gg/FJHbTKXFNC" target="_blank" rel="noopener">Discord</a></li>
+          </ul>
+        </div>
+        <div>
+          <h5>Help</h5>
+          <ul>
+            <li><a href="https://dragonslairhobbies.com/about-us/" target="_blank" rel="noopener">About us</a></li>
+            <li><a href="https://dragonslairhobbies.com/contact-us/" target="_blank" rel="noopener">Contact us</a></li>
+            <li><a href="https://dragonslairhobbies.com/free-shipping-return/" target="_blank" rel="noopener">Shipping policy</a></li>
+            <li><a href="https://dragonslairhobbies.com/refund_returns/" target="_blank" rel="noopener">Returns &amp; refunds</a></li>
+            <li><a href="https://dragonslairhobbies.com/my-account/" target="_blank" rel="noopener">My account</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© <span id="year"></span> Dragon's Lair Hobbies — Wallingford · Berlin · Connecticut</span>
+        <span>Roll for initiative. Stay for the crew.</span>
+      </div>
+    </div>
+  </footer>
+
+  <div class="toast" id="toast" role="status">Loading the shelves…</div>
   <script src="/assets/js/main.js" defer></script>
 </body>
 </html>
