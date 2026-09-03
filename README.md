@@ -1,17 +1,22 @@
 # Dragon's Lair Hobbies
 
-A zero-build static storefront rebuild for Dragon's Lair Hobbies, based on the source catalog at [dragonslairhobbies.com](https://dragonslairhobbies.com) and the shared local-business site patterns used across the linked repositories.
+Zero-build static storefront for Dragon's Lair Hobbies — Connecticut's tabletop headquarters, with locations in Wallingford and Berlin.
 
-## Included
+## What's here
 
-- Responsive storefront homepage with a dark tabletop-inspired visual system.
-- Source catalog pillars: Games Workshop, Warhammer 40,000, Age of Sigmar, paints and hobby supplies, and trading card games.
-- Wallingford and Berlin location cards with directions/details links.
-- Search panel, responsive mobile navigation, category filtering feedback, and lightweight cart interaction.
-- Vercel-ready zero-build deployment configuration.
+- Modern dark editorial homepage (Fraunces serif + Inter + JetBrains Mono).
+- Full category tree mirroring the live shop: Games Workshop (40k, Age of Sigmar, The Old World, Citadel, Black Library), Paint & Hobby (Vallejo, Scale 75, Two Thin Coats, Monument Hobbies, Tamiya), and ten Trading Card Games (MTG, Pokémon, Yu-Gi-Oh!, Gundam, Flesh & Blood, Riftbound, Star Wars: Unlimited, Lorcana, Altered, Elestrals).
+- Accessories rail: Chessex, Dragon Shield, Element Card Sleeves.
+- Store selector chip bar + live open/closed status driven by real store hours.
+- Location cards with correct addresses (220 North Colony St Ste C, Wallingford · 848 Farmington Ave Suite 2, Berlin), per-day hours tables, and holiday-closings note.
+- Community section with Discord, Instagram (@dragonslairtcg), Facebook.
+- Photo gallery with lightbox, brand marquee, search filter, mobile-first layout.
+- Vercel-ready zero-build deploy config.
 
 ## Run locally
 
-Serve the directory with any static server, for example `python3 -m http.server 4173`, then open `http://localhost:4173`.
+```bash
+python3 -m http.server 4173
+```
 
-The full product catalog and checkout remain linked to the original store until a commerce backend is connected.
+Then open http://localhost:4173. Product catalog and checkout still link to the main dragonslairhobbies.com storefront.
